@@ -17,8 +17,10 @@ export function populateHome() {
   homeDivEl.appendChild(taglineEl);
 
   const descriptEl = document.createElement("p");
-  descriptEl.textContent =
-    "Creative combos that delight the tastebuds and the eyes! Carefully crafted for your enjoyment!";
+  const textNode = document.createTextNode(
+    "Creative combos that delight the tastebuds and the eyes! Carefully crafted for your enjoyment!"
+  );
+  descriptEl.appendChild(textNode);
   homeDivEl.appendChild(descriptEl);
 
   return homeDivEl;

@@ -21,7 +21,14 @@ export function populateMenu() {
   menuArr.forEach((item) => {
     const menuItemEl = document.createElement("li");
     menuItemEl.classList.add("menu-item");
-    menuItemEl.textContent = `${item.name} $${item.price}`;
+    const itemName = document.createElement("p");
+    itemName.textContent = item.name;
+    itemName.classList.add("item-name");
+    const itemPrice = document.createElement("p");
+    itemPrice.classList.add("item-price");
+    itemPrice.textContent = item.price;
+    menuItemEl.appendChild(itemName);
+    menuItemEl.appendChild(itemPrice);
     menuListEl.appendChild(menuItemEl);
   });
 

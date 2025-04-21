@@ -1,9 +1,27 @@
+/* .archivo-300 {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.archivo-600 {
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+} */
+
 body {
   margin: 0;
+  font-family: "Archivo", sans-serif;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
+  text-align: center;
 }
 
 header {
@@ -31,16 +49,17 @@ nav {
   color: black;
 }
 
+/*  Home Styles */
+
 #home-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 3fr 2fr;
+  grid-template-rows: 1fr 2fr 1fr;
   column-gap: 2rem;
 }
 
 #home-content h1 {
   grid-column: 1 / 3;
-  text-align: center;
 }
 
 #home-content img {
@@ -52,4 +71,55 @@ nav {
 #home-content h2 {
   font-size: 3rem;
   align-self: center;
+}
+
+#home-content p {
+  grid-column: 1 / 3;
+  justify-self: center;
+  font-size: 2rem;
+  width: 70vw;
+  text-align: center;
+}
+
+/*  Menu Styles */
+#menu-content {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  justify-content: center;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  width: 20vw;
+}
+
+.menu-item {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  About Styles */
+#about-content {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+}
+
+#about-content img {
+  width: 320px;
+  height: 480px;
+  justify-self: center;
+}
+
+.about-para {
+  width: 50vw;
+  text-align: center;
+}
+
+.credits-para p {
+  font-size: 0.8rem;
+  margin: 0;
+  text-align: center;
 }
